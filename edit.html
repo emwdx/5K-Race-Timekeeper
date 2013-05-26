@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>2013 Dragon Run TimeKeeper</title>
+<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+
+</head>
+
+<body>
+<div class = "container-fluid">
+<div class = "row-fluid">
+<p class = "text-center"><img src = "/static/timekeeper/small_drun.png"></p>
+</div>
+</div>
+
+
+<hr>
+<h2>Edit runner information below:</h2>
+
+<form class = "form-horizontal" action = "/edit/" method = "POST">
+
+<div class="control-group">
+Runner Number:<input type = "text" name = "runnerID" class = "input-small" value = "runner[0]"/>
+Name:<input type = "text" name = "name" class = "input-small" value = "runner[1]"/>
+Gender: <select name = 'gender' value = "runner[2]">
+  <option value = 'M'>M</option>
+  <option value = 'F'>F</option>
+   
+</select>
+Age:
+<select name = 'age' value = "runner[3]">
+  <option value = 'LS'>Lower School</option>
+  <option value = 'US'>Middle School</option>
+  <option value = 'A'>Adult</option>
+   
+</select>
+Category:
+<select name = 'category'>
+  <option value = '0'>0</option>
+  <option value = '1'>1</option>
+  <option value = '2'>2</option>
+  <option value = '3'>3</option>
+  <option value = '4'>4</option>
+  <option value = '5'>Fun Run</option>
+  
+</select>
+</div>
+
+<div class="control-group">
+Has Finished the race?
+<input type = "checkbox" name = hasFinished {{runner[5}}  /><p><p>
+
+Finish Time:<input type = "text" name = "finishTime" class = "input-small" value = "runner[6]"/>
+</div>
+<button type = "submit" class = "btn">Submit</button>
+</form>
